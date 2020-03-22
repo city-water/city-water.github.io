@@ -5,15 +5,49 @@
   
 
   
-  <title>Hexo</title>
+  <title>[Git+Hexo]手把手带你打造你的个人博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="本篇博客也是想记录一下搭建Github 博客的过程，方便想入坑的新人小伙伴们。才不是因为博主时不时就会把自己的博客给删了话不多说，直接来上干货步骤。我会将一套搭建博客的过程写在这里，并在文尾补充几个搭建博客会遇到的问题。 步骤流程：一、安装Node.js 并配置好Node.js 环境，安装链接：Node1.本人用的是Windows10，所以选择的是“Windows Installer”，大家可以根">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Git+Hexo]手把手带你打造你的个人博客">
+<meta property="og:url" content="http://yoursite.com/2020/03/23/[Git+Hexo]%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本篇博客也是想记录一下搭建Github 博客的过程，方便想入坑的新人小伙伴们。才不是因为博主时不时就会把自己的博客给删了话不多说，直接来上干货步骤。我会将一套搭建博客的过程写在这里，并在文尾补充几个搭建博客会遇到的问题。 步骤流程：一、安装Node.js 并配置好Node.js 环境，安装链接：Node1.本人用的是Windows10，所以选择的是“Windows Installer”，大家可以根">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322212411270.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322211400528.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322212853200.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322213226341.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322213822743.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322214144101.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322214447728.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322214521130.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322214709145.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322215315354.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322215524629.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322215702502.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322220439843.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322221101479.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322220925121.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322221322644.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322221437191.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020032222202082.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322222030424.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322222120963.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322222544873.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322222748870.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322223248760.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322223512940.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322223626475.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322223814182.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322224250261.bmp">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322224453803.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200322225220579.jpg">
+<meta property="article:published_time" content="2020-03-22T22:57:07.074Z">
+<meta property="article:modified_time" content="2020-03-22T22:45:28.775Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200322212411270.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -62,9 +96,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-[Git+Hexo]手把手带你打造你的个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-[Git+Hexo]手把手带你打造你的个人博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/23/%5BGit+Hexo%5D%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
   <time datetime="2020-03-22T22:57:07.074Z" itemprop="datePublished">2020-03-23</time>
@@ -77,8 +109,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/23/%5BGit+Hexo%5D%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">[Git+Hexo]手把手带你打造你的个人博客</a>
+    <h1 class="article-title" itemprop="name">
+      [Git+Hexo]手把手带你打造你的个人博客
     </h1>
   
 
@@ -109,11 +141,9 @@
     </footer>
   </div>
   
-</article>
-
-
+    
   
-
+</article>
 
 </section>
         
