@@ -1,236 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
+  <title>
+    Pcrab 
+  </title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
+  <link rel="shortcut icon" href="/favicon.ico" />
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
+
   
 <link rel="stylesheet" href="/css/style.css">
 
+  <link href="https://google-fonts.mirrors.sjtug.sjtu.edu.cn/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+
+  
+  
+
+  
+<link rel="stylesheet" href="/css/iDisqus.min.css">
+
+  
+<script src="/js/iDisqus.min.js"></script>
+
+
+  <script>
+  var disq = new iDisqus('comment', {
+      forum: 'pcrab-blog',
+      api: 'https://disqus.pcrab.ml',
+      site: 'https://pcrab.ml',
+      mode: 1,
+      timeout: 3000,
+      init: true
+  });
+  </script>
+  
+  
+
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-[Git+Hexo]手把手带你打造你的个人博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/23/%5BGit+Hexo%5D%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2020-03-22T22:57:07.074Z" itemprop="datePublished">2020-03-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/23/%5BGit+Hexo%5D%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">[Git+Hexo]手把手带你打造你的个人博客</a>
-    </h1>
-  
+  <div class="title">
+  <img class="title_img" src="http://city-water.github.io/images/icon.png"/><br>
+  <p id="site_title">&nbspcity-water 的个人小剧场&nbsp</p>
+</div>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本篇博客也是想记录一下搭建Github 博客的过程，方便想入坑的新人小伙伴们。<del>才不是因为博主时不时就会把自己的博客给删了</del><br>话不多说，直接来上干货步骤。我会将一套搭建博客的过程写在这里，并在文尾补充几个搭建博客会遇到的问题。</p>
-<p><strong>步骤流程：</strong><br>一、安装Node.js 并配置好Node.js 环境，安装链接：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node</a><br><img src="https://img-blog.csdnimg.cn/20200322212411270.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="Node官网"><br>1.本人用的是Windows10，所以选择的是“Windows Installer”，大家可以根据自己的电脑系统来选择下载版本。</p>
-<p>2.安装全部默认即可，环境变量会自动配置。安装完成后，打开cmd 输入”node -v” 和”npm -v” 两条指令。成功界面如下。<br><img src="https://img-blog.csdnimg.cn/20200322211400528.bmp" alt="node是否安装成功"><br>2、安装GIt 和配置Git 环境，下载链接：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git 官网</a><br>1.本操作可直接参考    </p>
-<blockquote>
-<p><a href="https://www.cnblogs.com/ximiaomiao/p/7140456.html" target="_blank" rel="noopener">Git安装和使用</a></p>
-</blockquote>
-<p>安装成功最直接的显示就是在右键鼠标的时候，会多出来这两个选项<br><img src="https://img-blog.csdnimg.cn/20200322212853200.bmp" alt="Git 安装成功"><br>2.配置环境变量，在cmd 中输入“git –version”，成功界面如下：<br><img src="https://img-blog.csdnimg.cn/20200322213226341.bmp" alt="git环境变量成功"><br>三、Github 账户注册和新建项目<br>1.Github 账户注册参考：<a href="https://jingyan.baidu.com/article/4ae03de3d6f9c53eff9e6bdd.html" target="_blank" rel="noopener">如何注册Github账号？</a><br>2.新建项目，项目必须要遵守格式：<strong>账户名.github.io</strong>，并且需要勾选“Initialize this repository with a README”<br><del>我会告诉你我因为这个弄了半个小时吗？？？</del><br><img src="https://img-blog.csdnimg.cn/20200322213822743.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="新建Github 项目"><br>四、安装Hexo<br>1.在E 盘中创建一个blog 文件夹，然后通过cmd 进入到该文件夹里。安装位置看个人喜好。<br><img src="https://img-blog.csdnimg.cn/20200322214144101.bmp" alt="进入blog 文件夹"><br>2.输入“npm install hexo -g”，来安装Hexo。<br><img src="https://img-blog.csdnimg.cn/20200322214447728.bmp" alt="安装Hexo"><br>3.输入“hexo -v”，来检查hexo是否安装成功<br><img src="https://img-blog.csdnimg.cn/20200322214521130.bmp" alt="检查hexo 是否安装成功"><br>4.初始化hexo，输入“hexo init” 命令，在初始化过程中如果有一个进度条卡住的话记得按回车。<del>我就说为什么我等了十分钟还没有往下走！</del><br><img src="https://img-blog.csdnimg.cn/20200322214709145.bmp" alt="初始化hexo"><br>初始化完成后，你会在结尾看到一条“Start blogging with Hexo!”，这就代表初始化成功了。</p>
-<p>5.输入“npm install”，安装hexo 需要的组件<br><img src="https://img-blog.csdnimg.cn/20200322215315354.bmp" alt="安装hexo 的组件"><br>6.输入“hexo g” 和“hexo s” 两条命令来开启hexo 的本地静态网页，这时候我们可以通过“<a href="http://localhost:4000”">http://localhost:4000”</a> 来访问。<br><img src="https://img-blog.csdnimg.cn/20200322215524629.bmp" alt="静态页面"><br>访问界面<br><img src="https://img-blog.csdnimg.cn/20200322215702502.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="静态页面访问"><br>可以通过“ctrl + c” 来停止静态页面服务器。</p>
-<p>五、将Hexo 与Github page 关联起来<br>1.在blog 文件夹中右击鼠标打开“Git Bash Here”，接下里让我们来设置Git 的user name 和user email。<br><img src="https://img-blog.csdnimg.cn/20200322220439843.bmp" alt="设置user name 和email"><br>user.name “Github 用户名”<br>user.email “个人邮箱”</p>
-<p>2.与Github 库绑定密钥<br>输入“ ssh-keygen -t rsa -C “个人邮箱” ”，连续输入空格，生成密钥，最后会得到两个文件：id_rsa 和id_rsa.pub（默认存储路径：C:\Users\Administrator.ssh）<br><img src="https://img-blog.csdnimg.cn/20200322221101479.bmp" alt="创建密钥"><br><img src="https://img-blog.csdnimg.cn/20200322220925121.bmp" alt="密钥位置"><br>3.输入“ eval “$(ssh-agent -s)” ”，添加密钥到ssh-agent<br><img src="https://img-blog.csdnimg.cn/20200322221322644.bmp" alt="添加密钥到ssh-agent"><br>4.输入“ssh-add ~/.ssh/id_rsa”，添加生成的ssh key 到ssh-agent<br><img src="https://img-blog.csdnimg.cn/20200322221437191.bmp" alt="添加ssh key"><br>5.打开Github 点击头像下的settings，打开SSH and GPG keys 界面，点击New SSH key 来新建一个key<br><img src="https://img-blog.csdnimg.cn/2020032222202082.bmp" alt="打开Settings"><br><img src="https://img-blog.csdnimg.cn/20200322222030424.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="Github 的密钥"><br>在Title 中输入key 的名称，Key 的文本框中填写的是id_rsa.pub 文件中的内容，直接复制上去即可。（默认文件路径：C:\Users\Administrator.ssh）<br><img src="https://img-blog.csdnimg.cn/20200322222120963.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="Github key 创建"><br>6.输入“ssh -T <a href="mailto:git@github.com">git@github.com</a>”，来测试ssh 是否添加成功<br><img src="https://img-blog.csdnimg.cn/20200322222544873.bmp" alt="测试ssh 是否添加成功"><br>7.配置_config.yml 文件，修改repo 值（在文件的末尾）<br><strong>注意：“type: 、branch: ” 这些冒号后面一定要加空格！！！</strong><br><img src="https://img-blog.csdnimg.cn/20200322222748870.bmp" alt="配置_config.yml 文件"><br>repo 值是你的Github 项目里面的ssh，直接复制过来即可。<img src="https://img-blog.csdnimg.cn/20200322223248760.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="github ssh"><br>六、新建一篇博客<br>1.在cmd 中执行命令，“hexo new post “博客名称””<br><img src="https://img-blog.csdnimg.cn/20200322223512940.bmp" alt="创建博客"><br>在_posts目录下可以看到已经创建好的博客文件<br><img src="https://img-blog.csdnimg.cn/20200322223626475.bmp" alt="_posts"><br>2.在生成以及部署文章之前，要安装一个扩展。在cmd 中输入“npm install hexo-deployer-git –save”<br><img src="https://img-blog.csdnimg.cn/20200322223814182.bmp" alt="安装扩展"><br>后面的警告是因为安装的系统是Windows，所以可以忽略。</p>
-<p>七、访问博客<br>1.在Git Bash Here 中输入“hexo d -g”，生成及部署服务器。<br><img src="https://img-blog.csdnimg.cn/20200322224250261.bmp" alt="hexo d -g"><br>到这里，漫长的博客安装终于要进行收尾了。接下来就是最激动人心的时候了，访问你的博客！！！<br>在浏览器中访问你的地址：http://用户名.github.io<br><img src="https://img-blog.csdnimg.cn/20200322224453803.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="博客访问"><br>这时候，你将看到你的简洁明了的博客主页了！！！</p>
-<hr>
-<p>本篇参考文章：<a href="https://www.jianshu.com/p/4f56cf990bba" target="_blank" rel="noopener">https://www.jianshu.com/p/4f56cf990bba</a><br>十分感谢本篇文章的作者！！！<br><img src="https://img-blog.csdnimg.cn/20200322225220579.jpg" alt="在这里插入图片描述"><br>好了，本次的手把手带你打造博客之旅到此为止了<del>~<br>如果还想看到更多有趣好玩的知识的话，麻烦点个关注吧！！！<br>我们下篇再见</del></p>
+  <div class="navi">
+    <a id="navi_item" href="/#" class="menu-item-link">Home</a>
+    <a id="navi_item" href="/tags" class="menu-item-link">tags</a>
+    <a id="navi_item" href="/about" class="menu-item-link">about</a>
+    <a id="navi_item" href="/search" class="menu-item-link">search</a>
+</div>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/23/[Git+Hexo]%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck84i0lqp0001n0w3cydl55s8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+<hr/>
 
 
+  <div class="main">
+    <div class="list">
   
-    <article id="post-Hello-World" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/22/Hello-World/" class="article-date">
-  <time datetime="2020-03-22T11:19:50.000Z" itemprop="datePublished">2020-03-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/22/Hello-World/">Hello World</a>
-    </h1>
-  
+<div class=index_list>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/22/Hello-World/" data-id="ck84i0lql0000n0w3htcm0wun" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+  <div class="line_1">
+    <div class="index_post_date">
+      「 March 23rd 」
     </div>
   </div>
 
+  <a id="index_post_title" href="/2020/03/23/[Git+Hexo]手把手带你打造你的个人博客/">[Git+Hexo]手把手带你打造你的个人博客</a><br/>
 
+  <div class="blank">
   
+  </div>
+
+  <div class="index_post_excerpt">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/03/23/%5BGit+Hexo%5D%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">[Git+Hexo]手把手带你打造你的个人博客</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/22/Hello-World/">Hello World</a>
-          </li>
-        
-      </ul>
+  </div>
+
+  <!--
+  <a class="more" href="/2020/03/23/[Git+Hexo]手把手带你打造你的个人博客/">阅读更多</a>
+  -->
+
+</div>
+
+<div class=index_list>
+
+  <div class="line_1">
+    <div class="index_post_date">
+      「 March 22nd 」
     </div>
   </div>
 
+  <a id="index_post_title" href="/2020/03/22/Hello-World/">Hello World</a><br/>
+
+  <div class="blank">
   
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+  <div class="index_post_excerpt">
+    
+  </div>
+
+  <!--
+  <a class="more" href="/2020/03/22/Hello-World/">阅读更多</a>
+  -->
+
+</div>
+
+
+<div class="page_num">
+
+    
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</div>
 
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
+</div>
 
   </div>
+
+  <foot id="footer">
+  <hr class="boldline"/>
+  <p class="center font">
+    &copy - <a href="http://city-water.github.io" target="_blank" rel="noopener">city-water</a> -  2020 - Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>  Themed by <a href="https://github.com/pcrab/hexo-theme-quark" target="_blank" rel="noopener"> quark </a> 
+  </p>
+  <br/>
+</foot>
+
 </body>
 </html>
