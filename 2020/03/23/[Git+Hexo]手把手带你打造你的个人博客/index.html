@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Pcrab  - [Git+Hexo]手把手带你打造你的个人博客 
+  </title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link href="https://google-fonts.mirrors.sjtug.sjtu.edu.cn/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+
+  
+  
+
+  
+<link rel="stylesheet" href="/css/iDisqus.min.css">
+
+  
+<script src="/js/iDisqus.min.js"></script>
+
+
+  <script>
+  var disq = new iDisqus('comment', {
+      forum: 'pcrab-blog',
+      api: 'https://disqus.pcrab.ml',
+      site: 'https://pcrab.ml',
+      mode: 1,
+      timeout: 3000,
+      init: true
+  });
+  </script>
+  
+  
+
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div class="title">
+  <img class="title_img" src="http://city-water.github.io/images/icon.png"/><br>
+  <p id="site_title">&nbspcity-water 的个人小剧场&nbsp</p>
+</div>
+
+  <div class="navi">
+    <a id="navi_item" href="/#" class="menu-item-link">Home</a>
+    <a id="navi_item" href="/tags" class="menu-item-link">tags</a>
+    <a id="navi_item" href="/about" class="menu-item-link">about</a>
+    <a id="navi_item" href="/search" class="menu-item-link">search</a>
+</div>
+
+<hr/>
+
+
+  <div class="main">
+    <post>
+
+  <div class="post_title">
+    [Git+Hexo]手把手带你打造你的个人博客
+  </div>
+
+  <br/><br/>
+
+  <div id="post_content">
+    <p>本篇博客也是想记录一下搭建Github 博客的过程，方便想入坑的新人小伙伴们。<del>才不是因为博主时不时就会把自己的博客给删了</del><br>话不多说，直接来上干货步骤。我会将一套搭建博客的过程写在这里，并在文尾补充几个搭建博客会遇到的问题。</p>
+<p><strong>步骤流程：</strong><br>一、安装Node.js 并配置好Node.js 环境，安装链接：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node</a><br><img src="https://img-blog.csdnimg.cn/20200322212411270.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="Node官网"><br>1.本人用的是Windows10，所以选择的是“Windows Installer”，大家可以根据自己的电脑系统来选择下载版本。</p>
+<p>2.安装全部默认即可，环境变量会自动配置。安装完成后，打开cmd 输入”node -v” 和”npm -v” 两条指令。成功界面如下。<br><img src="https://img-blog.csdnimg.cn/20200322211400528.bmp" alt="node是否安装成功"><br>2、安装GIt 和配置Git 环境，下载链接：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git 官网</a><br>1.本操作可直接参考    </p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/ximiaomiao/p/7140456.html" target="_blank" rel="noopener">Git安装和使用</a></p>
+</blockquote>
+<p>安装成功最直接的显示就是在右键鼠标的时候，会多出来这两个选项<br><img src="https://img-blog.csdnimg.cn/20200322212853200.bmp" alt="Git 安装成功"><br>2.配置环境变量，在cmd 中输入“git –version”，成功界面如下：<br><img src="https://img-blog.csdnimg.cn/20200322213226341.bmp" alt="git环境变量成功"><br>三、Github 账户注册和新建项目<br>1.Github 账户注册参考：<a href="https://jingyan.baidu.com/article/4ae03de3d6f9c53eff9e6bdd.html" target="_blank" rel="noopener">如何注册Github账号？</a><br>2.新建项目，项目必须要遵守格式：<strong>账户名.github.io</strong>，并且需要勾选“Initialize this repository with a README”<br><del>我会告诉你我因为这个弄了半个小时吗？？？</del><br><img src="https://img-blog.csdnimg.cn/20200322213822743.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="新建Github 项目"><br>四、安装Hexo<br>1.在E 盘中创建一个blog 文件夹，然后通过cmd 进入到该文件夹里。安装位置看个人喜好。<br><img src="https://img-blog.csdnimg.cn/20200322214144101.bmp" alt="进入blog 文件夹"><br>2.输入“npm install hexo -g”，来安装Hexo。<br><img src="https://img-blog.csdnimg.cn/20200322214447728.bmp" alt="安装Hexo"><br>3.输入“hexo -v”，来检查hexo是否安装成功<br><img src="https://img-blog.csdnimg.cn/20200322214521130.bmp" alt="检查hexo 是否安装成功"><br>4.初始化hexo，输入“hexo init” 命令，在初始化过程中如果有一个进度条卡住的话记得按回车。<del>我就说为什么我等了十分钟还没有往下走！</del><br><img src="https://img-blog.csdnimg.cn/20200322214709145.bmp" alt="初始化hexo"><br>初始化完成后，你会在结尾看到一条“Start blogging with Hexo!”，这就代表初始化成功了。</p>
+<p>5.输入“npm install”，安装hexo 需要的组件<br><img src="https://img-blog.csdnimg.cn/20200322215315354.bmp" alt="安装hexo 的组件"><br>6.输入“hexo g” 和“hexo s” 两条命令来开启hexo 的本地静态网页，这时候我们可以通过“<a href="http://localhost:4000”">http://localhost:4000”</a> 来访问。<br><img src="https://img-blog.csdnimg.cn/20200322215524629.bmp" alt="静态页面"><br>访问界面<br><img src="https://img-blog.csdnimg.cn/20200322215702502.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="静态页面访问"><br>可以通过“ctrl + c” 来停止静态页面服务器。</p>
+<p>五、将Hexo 与Github page 关联起来<br>1.在blog 文件夹中右击鼠标打开“Git Bash Here”，接下里让我们来设置Git 的user name 和user email。<br><img src="https://img-blog.csdnimg.cn/20200322220439843.bmp" alt="设置user name 和email"><br>user.name “Github 用户名”<br>user.email “个人邮箱”</p>
+<p>2.与Github 库绑定密钥<br>输入“ ssh-keygen -t rsa -C “个人邮箱” ”，连续输入空格，生成密钥，最后会得到两个文件：id_rsa 和id_rsa.pub（默认存储路径：C:\Users\Administrator.ssh）<br><img src="https://img-blog.csdnimg.cn/20200322221101479.bmp" alt="创建密钥"><br><img src="https://img-blog.csdnimg.cn/20200322220925121.bmp" alt="密钥位置"><br>3.输入“ eval “$(ssh-agent -s)” ”，添加密钥到ssh-agent<br><img src="https://img-blog.csdnimg.cn/20200322221322644.bmp" alt="添加密钥到ssh-agent"><br>4.输入“ssh-add ~/.ssh/id_rsa”，添加生成的ssh key 到ssh-agent<br><img src="https://img-blog.csdnimg.cn/20200322221437191.bmp" alt="添加ssh key"><br>5.打开Github 点击头像下的settings，打开SSH and GPG keys 界面，点击New SSH key 来新建一个key<br><img src="https://img-blog.csdnimg.cn/2020032222202082.bmp" alt="打开Settings"><br><img src="https://img-blog.csdnimg.cn/20200322222030424.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="Github 的密钥"><br>在Title 中输入key 的名称，Key 的文本框中填写的是id_rsa.pub 文件中的内容，直接复制上去即可。（默认文件路径：C:\Users\Administrator.ssh）<br><img src="https://img-blog.csdnimg.cn/20200322222120963.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="Github key 创建"><br>6.输入“ssh -T <a href="mailto:git@github.com">git@github.com</a>”，来测试ssh 是否添加成功<br><img src="https://img-blog.csdnimg.cn/20200322222544873.bmp" alt="测试ssh 是否添加成功"><br>7.配置_config.yml 文件，修改repo 值（在文件的末尾）<br><strong>注意：“type: 、branch: ” 这些冒号后面一定要加空格！！！</strong><br><img src="https://img-blog.csdnimg.cn/20200322222748870.bmp" alt="配置_config.yml 文件"><br>repo 值是你的Github 项目里面的ssh，直接复制过来即可。<img src="https://img-blog.csdnimg.cn/20200322223248760.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="github ssh"><br>六、新建一篇博客<br>1.在cmd 中执行命令，“hexo new post “博客名称””<br><img src="https://img-blog.csdnimg.cn/20200322223512940.bmp" alt="创建博客"><br>在_posts目录下可以看到已经创建好的博客文件<br><img src="https://img-blog.csdnimg.cn/20200322223626475.bmp" alt="_posts"><br>2.在生成以及部署文章之前，要安装一个扩展。在cmd 中输入“npm install hexo-deployer-git –save”<br><img src="https://img-blog.csdnimg.cn/20200322223814182.bmp" alt="安装扩展"><br>后面的警告是因为安装的系统是Windows，所以可以忽略。</p>
+<p>七、访问博客<br>1.在Git Bash Here 中输入“hexo d -g”，生成及部署服务器。<br><img src="https://img-blog.csdnimg.cn/20200322224250261.bmp" alt="hexo d -g"><br>到这里，漫长的博客安装终于要进行收尾了。接下来就是最激动人心的时候了，访问你的博客！！！<br>在浏览器中访问你的地址：http://用户名.github.io<br><img src="https://img-blog.csdnimg.cn/20200322224453803.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc3NjcyNA==,size_16,color_FFFFFF,t_70" alt="博客访问"><br>这时候，你将看到你的简洁明了的博客主页了！！！</p>
+<hr>
+<p>本篇参考文章：<a href="https://www.jianshu.com/p/4f56cf990bba" target="_blank" rel="noopener">https://www.jianshu.com/p/4f56cf990bba</a><br>十分感谢本篇文章的作者！！！<br><img src="https://img-blog.csdnimg.cn/20200322225220579.jpg" alt="在这里插入图片描述"><br>好了，本次的手把手带你打造博客之旅到此为止了<del>~<br>如果还想看到更多有趣好玩的知识的话，麻烦点个关注吧！！！<br>我们下篇再见</del></p>
+
+  </div>
+
+  <br/><br/><br/><br/>
+
+  
+
+  <div class="copyright" >
+
+    <a class="license-image" rel="license" href="http://creativecommons.org/licenses/by
+-nc
+-sa
+/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+
+    <div>
+
+      <p>本作品采用
+
+      <a class="license-word-hyper" rel="license" href="http://creativecommons.org/licenses/by
+-nc
+-sa
+/4.0/">
+        知识共享署名
+-非商业性使用
+-相同方式共享
+4.0 国际许可协议</a>
+
+      进行许可。</p>
+
+    </div>
+
+    </div>
+
+
+  <div id="top">
+    <a href="#">▲</a>
+    <a href="#footer">▼</a>
+</div>
+
+  
+
+
+<div id="comment"></div>
+
+
+
+
+
+</post>
+
+  </div>
+
+  <foot id="footer">
+  <hr class="boldline"/>
+  <p class="center font">
+    &copy - <a href="http://city-water.github.io" target="_blank" rel="noopener">city-water</a> -  2020 - Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>  Themed by <a href="https://github.com/pcrab/hexo-theme-quark" target="_blank" rel="noopener"> quark </a> 
+  </p>
+  <br/>
+</foot>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
